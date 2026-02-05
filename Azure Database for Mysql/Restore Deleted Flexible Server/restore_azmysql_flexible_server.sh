@@ -453,7 +453,7 @@ function invoke_mysql_restore() {
     printf "$(t RestoringServer)\n" "$SELECTED_DELETED_SERVER_NAME" "$NEW_SERVER_NAME" "$SELECTED_LOCATION"
     
     local api_version="2024-06-01-preview"
-    local request_uri="${ARM_ENDPOINT}subscriptions/${SELECTED_SUB_ID}/resourceGroups/${RG_NAME}/providers/Microsoft.DBforMySQL/flexibleServers/${NEW_SERVER_NAME}?api-version=${api_version}"
+    local request_uri="${ARM_ENDPOINT}/subscriptions/${SELECTED_SUB_ID}/resourceGroups/${RG_NAME}/providers/Microsoft.DBforMySQL/flexibleServers/${NEW_SERVER_NAME}?api-version=${api_version}"
     
     local request_body
     request_body=$(jq -n \
